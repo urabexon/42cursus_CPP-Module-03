@@ -6,7 +6,7 @@
 /*   By: hurabe <hurabe@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/10 22:17:11 by hurabe            #+#    #+#             */
-/*   Updated: 2025/01/10 22:39:03 by hurabe           ###   ########.fr       */
+/*   Updated: 2025/01/11 18:05:00 by hurabe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,16 +17,16 @@
 
 class ClapTrap {
 	public:
-		ClapTrap(void);
-		ClapTrap(std::string name);
-		ClapTrap(const ClapTrap &copy);
-		ClapTrap& operator = (const ClapTrap &copy);
-		~ClapTrap();
+		ClapTrap(void);                              // デフォルトコンストラクタ
+		ClapTrap(std::string name);                  // 引数をとるコンストラクタ
+		ClapTrap(const ClapTrap &copy);              // コピーコンストラクタ
+		ClapTrap& operator = (const ClapTrap &copy); // 代入演算子のオーバーロード
+		~ClapTrap();                                 // デストラクタ
 
 		// アクション定義
 		void attack(const std::string& target);	// 攻撃
 		void takeDamage(unsigned int amount);	// ダメージを受ける 
-		void beRepaired(unsigned int amount);	// 修復
+		void beRepaired(unsigned int amount);	// 回復
 
 	private:
 		std::string _name;			// 名前
