@@ -6,30 +6,30 @@
 /*   By: hurabe <hurabe@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/10 22:08:44 by hurabe            #+#    #+#             */
-/*   Updated: 2025/01/11 19:34:31 by hurabe           ###   ########.fr       */
+/*   Updated: 2025/01/12 18:27:10 by hurabe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
-// デフォルトコンストラクタ
-ClapTrap::ClapTrap() : _name("default"), _hitPoints(10), _energyPoints(10), _attackDamage(0) {
-	std::cout << "Default constructor called" << std::endl;
+// コンストラクタ(名前、ヒットポイント、エナジーポイント、攻撃力を初期化する)
+ClapTrap::ClapTrap(std::string name) : _name(name), _hitPoints(10), _energyPoints(10), _attackDamage(0) {
+	std::cout << "ClapTrap " << _name << " Ready for action!" << std::endl;
 }
 
-// 引数をとるコンストラクタ
-ClapTrap::ClapTrap(std::string name) {
-	std::cout << "ClapTrap " << this->_name << " has been assembled! Ready for action!" << std::endl;
+// コピーコンストラクタ(オブジェクトのコピーが作成される際に呼び出される)
+ClapTrap::ClapTrap(const ClapTrap &copy) : _name(copy._name), _hitPoints(copy._hitPoints), _energyPoints(copy._energyPoints), _attackDamage(copy._attackDamage) {
+	std::cout << "ClapTrap " << _name << " copied!" << std::endl;
 }
 
-// コピーコンストラクタ
-ClapTrap::ClapTrap(const ClapTrap &copy) {
-	
-}
-
-// 代入演算子のオーバーロード
+// 代入演算子のオーバーロード(オブジェクトの代入が行われる際に呼ばれる)
 ClapTrap& ClapTrap::operator = (const ClapTrap &copy) {
-	
+	_name = copy._name;
+	_hitPoints = copy._hitPoints;
+	_energyPoints = copy._energyPoints;
+	_attackDamage = copy._attackDamage;
+	std::cout << "ClapTrap " << _name << " assigned!" << std::endl;
+	return *this;	
 }
 
 // デストラクタ
@@ -42,7 +42,7 @@ void ClapTrap::attack(const std::string& target) {
 	// エナジーポイントとヒットポイントが十分かチェック
 	if (_energyPoints > 0 && _hitPoints > 0) {
 		// 攻撃の結果出力してから、--でエナジーポイントを減らす
-		std::cout << "ClapTrap " << _name << "attacks " << target << ", causing " << _attackDamage << " points of damage!" << std::endl;
+		std::cout << "ClapTrap " << _name << " attacks " << target << ", causing " << _attackDamage << " points of damage!" << std::endl;
 		_energyPoints--;
 	} else {
 		// 攻撃不能時のメッセージ
