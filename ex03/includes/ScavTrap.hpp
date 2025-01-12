@@ -6,7 +6,7 @@
 /*   By: hurabe <hurabe@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/12 21:55:25 by hurabe            #+#    #+#             */
-/*   Updated: 2025/01/12 22:25:12 by hurabe           ###   ########.fr       */
+/*   Updated: 2025/01/12 23:39:39 by hurabe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 #include "ClapTrap.hpp"
 
 // ClapTrapクラスから継承し、ScavTrapクラスを作成する
-class ScavTrap : public ClapTrap {
+class ScavTrap : virtual public ClapTrap {
 	public:
 		ScavTrap(std::string name);                  // コンストラクタ
 		ScavTrap(const ScavTrap &copy);              // コピーコンストラクタ

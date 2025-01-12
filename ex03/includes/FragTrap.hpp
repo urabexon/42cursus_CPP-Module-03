@@ -6,7 +6,7 @@
 /*   By: hurabe <hurabe@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/12 21:55:23 by hurabe            #+#    #+#             */
-/*   Updated: 2025/01/12 22:26:07 by hurabe           ###   ########.fr       */
+/*   Updated: 2025/01/12 23:39:44 by hurabe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 // 基底クラスのClapTrapをインクルードする
 #include "ClapTrap.hpp"
 
-class FragTrap : public ClapTrap {
+class FragTrap : virtual public ClapTrap {
 	public:
 		FragTrap(std::string name);                  // コンストラクタ
 		FragTrap(const FragTrap &copy);              // コピーコンストラクタ
