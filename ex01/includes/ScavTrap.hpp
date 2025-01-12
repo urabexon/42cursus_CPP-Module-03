@@ -1,29 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hurabe <hurabe@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/10 22:08:41 by hurabe            #+#    #+#             */
-/*   Updated: 2025/01/12 19:48:24 by hurabe           ###   ########.fr       */
+/*   Created: 2025/01/12 18:45:54 by hurabe            #+#    #+#             */
+/*   Updated: 2025/01/12 19:42:01 by hurabe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef SCAVTRAP_HPP
+#define SCAVTRAP_HPP
+
 #include "ClapTrap.hpp"
 
-int	main(void) {
-	// ClapTrapオブジェクトを作成し、名前を設定する。
-	ClapTrap clapbot("CT_1");
-	
-	// ターゲット1に対して攻撃を行う→ダメージを受ける→回復
-	clapbot.attack("target1");
-	clapbot.takeDamage(3);
-	clapbot.beRepaired(5);
-	
-	// 再度攻撃→ダメージを受ける→回復
-	clapbot.attack("target2");
-	clapbot.takeDamage(15);
-	clapbot.beRepaired(10);
-	return 0;
-}
+// ClapTrapクラスから継承し、ScavTrapクラスを作成する
+class ScavTrap : public ClapTrap {
+	public:
+		ScavTrap(std::string name);
+		ScavTrap(const ScavTrap &copy);
+		ScavTrap& operator = (const ScavTrap &copy);
+		~ScavTrap();
+
+		void guardGate();
+		void attack(const std::string& target);
+};
+
+#endif

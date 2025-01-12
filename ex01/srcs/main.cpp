@@ -5,25 +5,28 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: hurabe <hurabe@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/10 22:08:41 by hurabe            #+#    #+#             */
-/*   Updated: 2025/01/12 19:48:24 by hurabe           ###   ########.fr       */
+/*   Created: 2025/01/12 18:44:59 by hurabe            #+#    #+#             */
+/*   Updated: 2025/01/12 19:49:14 by hurabe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
 
 int	main(void) {
-	// ClapTrapオブジェクトを作成し、名前を設定する。
+	// ClapTrap,ScavTrapオブジェクトを作成し、名前を設定する。
 	ClapTrap clapbot("CT_1");
+	ScavTrap scavbot("ST_2");
 	
-	// ターゲット1に対して攻撃を行う→ダメージを受ける→回復
+	// ClapTrapで攻撃を行う→ダメージを受ける→回復
 	clapbot.attack("target1");
 	clapbot.takeDamage(3);
 	clapbot.beRepaired(5);
 	
-	// 再度攻撃→ダメージを受ける→回復
-	clapbot.attack("target2");
-	clapbot.takeDamage(15);
-	clapbot.beRepaired(10);
+	// ScavTrapで攻撃を行う→ダメージを受ける→回復→ゲートキーパーモード
+	scavbot.attack("target2");
+	scavbot.takeDamage(15);
+	scavbot.beRepaired(10);
+	scavbot.guardGate();
 	return 0;
 }

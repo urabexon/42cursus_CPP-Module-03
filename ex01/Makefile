@@ -5,12 +5,12 @@
 #                                                     +:+ +:+         +:+      #
 #    By: hurabe <hurabe@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2025/01/10 22:04:46 by hurabe            #+#    #+#              #
-#    Updated: 2025/01/12 18:42:13 by hurabe           ###   ########.fr        #
+#    Created: 2025/01/12 18:36:42 by hurabe            #+#    #+#              #
+#    Updated: 2025/01/12 18:39:28 by hurabe           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		=	ClapTrap
+NAME		=	ScavTrap
 CXX			=	c++
 CXXFLAGS	=	-Wall -Wextra -Werror -std=c++98 -pedantic-errors
 RM			=	rm -rf
@@ -18,7 +18,7 @@ RM			=	rm -rf
 INCS		=	-I includes/
 SRCS_DIR	=	srcs/
 OBJS_DIR	=	objs/
-SRCS_FILES	=	main.cpp ClapTrap.cpp
+SRCS_FILES	=	main.cpp ClapTrap.cpp ScavTrap.cpp
 SRCS		=	$(addprefix $(SRCS_DIR), $(SRCS_FILES))
 OBJS		=	$(patsubst $(SRCS_DIR)%.cpp, $(OBJS_DIR)%.o, $(SRCS))
 
