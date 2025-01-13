@@ -6,7 +6,7 @@
 /*   By: hurabe <hurabe@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/12 18:45:51 by hurabe            #+#    #+#             */
-/*   Updated: 2025/01/13 18:09:08 by hurabe           ###   ########.fr       */
+/*   Updated: 2025/01/13 20:44:57 by hurabe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ class ClapTrap {
 	public:
 		ClapTrap(std::string name);                  // コンストラクタ
 		ClapTrap(const ClapTrap &copy);              // コピーコンストラクタ
-		ClapTrap& operator=(const ClapTrap &copy); // 代入演算子のオーバーロード
-		~ClapTrap();                                 // デストラクタ
+		ClapTrap& operator=(const ClapTrap &copy);   // 代入演算子のオーバーロード
+		virtual ~ClapTrap();                         // デストラクタ
 
 		// アクション定義
 		void attack(const std::string& target);	// 攻撃

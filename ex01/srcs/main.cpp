@@ -6,7 +6,7 @@
 /*   By: hurabe <hurabe@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/12 18:44:59 by hurabe            #+#    #+#             */
-/*   Updated: 2025/01/12 19:49:14 by hurabe           ###   ########.fr       */
+/*   Updated: 2025/01/13 20:45:25 by hurabe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,10 @@ int	main(void) {
 	scavbot.takeDamage(15);
 	scavbot.beRepaired(10);
 	scavbot.guardGate();
+
+	// new,deleteケース
+	ClapTrap *test = new ScavTrap("test");
+	test->attack("test");
+	delete test;
 	return 0;
 }
