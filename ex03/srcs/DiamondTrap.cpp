@@ -6,7 +6,7 @@
 /*   By: hurabe <hurabe@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/12 21:55:32 by hurabe            #+#    #+#             */
-/*   Updated: 2025/01/12 23:45:08 by hurabe           ###   ########.fr       */
+/*   Updated: 2025/01/13 18:10:50 by hurabe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ DiamondTrap::DiamondTrap(const DiamondTrap &copy) : ClapTrap(copy), ScavTrap(cop
 }
 
 // 代入演算子のオーバーロード(オブジェクトの代入が行われる際に呼ばれる)
-DiamondTrap& DiamondTrap::operator = (const DiamondTrap &copy) {
+DiamondTrap& DiamondTrap::operator=(const DiamondTrap &copy) {
 	_name = copy._name;
 	_hitPoints = copy._hitPoints;
 	_energyPoints = copy._energyPoints;

@@ -6,7 +6,7 @@
 /*   By: hurabe <hurabe@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/12 21:55:35 by hurabe            #+#    #+#             */
-/*   Updated: 2025/01/12 22:30:04 by hurabe           ###   ########.fr       */
+/*   Updated: 2025/01/13 18:10:56 by hurabe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ FragTrap::FragTrap(const FragTrap &copy) : ClapTrap(copy) {
 }
 
 // 代入演算子のオーバーロード(オブジェクトの代入が行われる際に呼ばれる)
-FragTrap& FragTrap::operator = (const FragTrap &copy) {
+FragTrap& FragTrap::operator=(const FragTrap &copy) {
 	_name = copy._name;
 	_hitPoints = copy._hitPoints;
 	_energyPoints = copy._energyPoints;

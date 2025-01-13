@@ -6,7 +6,7 @@
 /*   By: hurabe <hurabe@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/12 18:44:47 by hurabe            #+#    #+#             */
-/*   Updated: 2025/01/12 21:04:53 by hurabe           ###   ########.fr       */
+/*   Updated: 2025/01/13 18:11:44 by hurabe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ ScavTrap::ScavTrap(const ScavTrap &copy) : ClapTrap(copy) {
 }
 
 // 代入演算子のオーバーロード(オブジェクトの代入が行われる際に呼ばれる)
-ScavTrap& ScavTrap::operator = (const ScavTrap &copy) {
+ScavTrap& ScavTrap::operator=(const ScavTrap &copy) {
 	_name = copy._name;
 	_hitPoints = copy._hitPoints;
 	_energyPoints = copy._energyPoints;

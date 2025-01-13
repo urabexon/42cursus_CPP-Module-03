@@ -6,7 +6,7 @@
 /*   By: hurabe <hurabe@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/12 21:55:30 by hurabe            #+#    #+#             */
-/*   Updated: 2025/01/12 22:28:55 by hurabe           ###   ########.fr       */
+/*   Updated: 2025/01/13 18:10:43 by hurabe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ ClapTrap::ClapTrap(const ClapTrap &copy) : _name(copy._name), _hitPoints(copy._h
 }
 
 // 代入演算子のオーバーロード(オブジェクトの代入が行われる際に呼ばれる)
-ClapTrap& ClapTrap::operator = (const ClapTrap &copy) {
+ClapTrap& ClapTrap::operator=(const ClapTrap &copy) {
 	_name = copy._name;
 	_hitPoints = copy._hitPoints;
 	_energyPoints = copy._energyPoints;
